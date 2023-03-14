@@ -13,19 +13,19 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(path: "../ExternalPackages/spm-remote-local-demo-main"),
+        // .package(path: "../ExternalPackages/spm-remote-local-demo-main"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "Level2PackageView",
-            dependencies: ["spm-remote-local-demo-main"]),
+            dependencies: []),
         .target(
             name: "Level2PackageData",
-            dependencies: ["spm-remote-local-demo-main"]),
+            dependencies: []),
         .testTarget(
             name: "Level2PackageTests",
-            dependencies: ["Level2PackageView", "Level2PackageData", "spm-remote-local-demo-main"]),
+            dependencies: ["Level2PackageView", "Level2PackageData"]),
     ]
 )
